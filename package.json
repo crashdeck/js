@@ -1,0 +1,18 @@
+{
+  "name": "loggie-io",
+  "version": "0.0.1",
+  "description": "Log every thing in just few steps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "remote",
+    "logging"
+  ],
+  "author": "Arvind Singh",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
