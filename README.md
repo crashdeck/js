@@ -26,7 +26,6 @@ loggie.init({
   secretKey: "<secret-key>",
   bucketId: "<bucket-id>"
 })
-// axios.<method> will now provide autocomplete and parameter typings
 ```
 Start to push logs
 
@@ -34,5 +33,4 @@ Start to push logs
 loggie.info({
   message: "This is a testing info log"
 })
-// axios.<method> will now provide autocomplete and parameter typings
 ```
