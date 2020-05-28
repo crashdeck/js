@@ -1,8 +1,8 @@
-const loggieClient = require("./index")
+const loggie = require("./index")
 
-const loggie = new loggieClient({
-	secretKey: "this is a secretKey",
-	bucketId: "5ecd25f0bf05c318c22349bf"
+loggie.init({
+  secretKey: "R240hWauo6v8RM8DF6Mv7dSCpKmHeD8x02Vi",
+  bucketId: "5ecf2e28bf05c318c22349d1"
 })
 
 loggie.info({

@@ -27,7 +27,7 @@ loggie.init({
   bucketId: "<bucket-id>"
 })
 ```
-Start to push logs
+Start to push logs into your bucket
 
 ```js
 loggie.info({
