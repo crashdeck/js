@@ -29,8 +29,42 @@ loggie.init({
 ```
 Start to push logs into your bucket
 
+#### info
+
 ```js
 loggie.info({
-  message: "This is a testing info log"
+  message: "This is a info log"
+})
+```
+
+#### debug
+
+```js
+loggie.debug({
+  message: "This is a debug log"
+})
+```
+
+#### warning
+
+```js
+loggie.warning({
+  message: "This is a warning log"
+})
+```
+
+#### error
+
+```js
+loggie.error({
+  message: "This is a error log"
+})
+```
+
+#### fatal
+
+```js
+loggie.fatal({
+  message: "This is a fatl log"
 })
 ```
