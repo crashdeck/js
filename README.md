@@ -1,4 +1,4 @@
-# Loggie.io
+# Crashdeck.io
 
 Start to log everything in just few clicks
 
@@ -12,7 +12,7 @@ Start to log everything in just few clicks
 ## Installing
 
 ```bash
-$ npm install loggie-io
+$ npm install crashdeck-io
 ```
 
 ## Example
@@ -20,9 +20,9 @@ $ npm install loggie-io
 ### Node.js
 
 ```js
-const loggie = require('loggie-io');
+const crashdeck = require('crashdeck-io');
 
-loggie.init({
+crashdeck.init({
   secretKey: "<secret-key>",
   bucketId: "<bucket-id>"
 })
@@ -32,7 +32,7 @@ Start to push logs into your bucket
 #### info
 
 ```js
-loggie.info({
+crashdeck.info({
   message: "This is a info log"
 })
 ```
@@ -40,7 +40,7 @@ loggie.info({
 #### debug
 
 ```js
-loggie.debug({
+crashdeck.debug({
   message: "This is a debug log"
 })
 ```
@@ -48,7 +48,7 @@ loggie.debug({
 #### warning
 
 ```js
-loggie.warning({
+crashdeck.warning({
   message: "This is a warning log"
 })
 ```
@@ -56,7 +56,7 @@ loggie.warning({
 #### error
 
 ```js
-loggie.error({
+crashdeck.error({
   message: "This is a error log"
 })
 ```
@@ -64,7 +64,7 @@ loggie.error({
 #### fatal
 
 ```js
-loggie.fatal({
+crashdeck.fatal({
   message: "This is a fatl log"
 })
 ```

@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-class Loggie {
+class Crashdeck {
   init(config) {
     this.secretKey = config.secretKey;
     this.bucketId = config.bucketId;
@@ -50,7 +50,7 @@ class Loggie {
   pushLog(payload) {
     return axios
       .post(
-        `https://go.loggie.io/log-${this.bucketId}`,
+        `https://go.crashdeck.io/log-${this.bucketId}`,
         {
           message: payload.message,
           type: payload.type,
@@ -68,4 +68,4 @@ class Loggie {
   }
 }
 
-module.exports = new Loggie();
+module.exports = new Crashdeck();
