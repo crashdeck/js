@@ -12,7 +12,7 @@ Start to log everything in just few clicks
 ## Installing
 
 ```bash
-$ npm install crashdeck-io
+$ npm install crashdeck
 ```
 
 ## Example
@@ -20,7 +20,7 @@ $ npm install crashdeck-io
 ### Node.js
 
 ```js
-const crashdeck = require('crashdeck-io');
+const crashdeck = require('crashdeck');
 
 crashdeck.init({
   secretKey: "<secret-key>",
