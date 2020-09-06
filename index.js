@@ -50,7 +50,7 @@ class Loggie {
   pushLog(payload) {
     return axios
       .post(
-        `https://go.loggie.io/log-${this.bucketId}`,
+        `https://api.loggie.io/log-${this.bucketId}`,
         {
           message: payload.message,
           type: payload.type,
