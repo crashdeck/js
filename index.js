@@ -7,6 +7,25 @@ class Loggie {
     this.channel = config.channel || "";
   }
 
+  // auto collect errors
+  autoCollectErrors(bool) {
+    if (bool) {
+      this.isAutoCollectErrorsEnabled = true;
+      const vm = this;
+
+      window.addEventListener("error", function (event) {
+        const message = event.message || "Message not found";
+        const fileName = event.filename || "Unable to get file name";
+        const lineno = event.lineno || "Unable to get line number";
+        const colno = event.colno || "Unable to get column number";
+
+        const crashdeckErrorMessage = `${message} in ${fileName} at line number: ${lineno} and column: ${colno}`;
+
+        vm.error({ message: crashdeckErrorMessage });
+      });
+    }
+  }
+
   info(payload) {
     this.pushLog({
       message: payload.message,
