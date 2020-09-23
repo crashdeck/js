@@ -1,6 +1,6 @@
 {
   "name": "@crashdeck/crashdeck",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Log every thing in just few steps",
   "main": "index.js",
   "scripts": {
