@@ -69,7 +69,7 @@ class Loggie {
   pushLog(payload) {
     return axios
       .post(
-        `https://api.loggie.io/log-${this.bucketId}`,
+        `https://api.crashdeck.io/log-${this.bucketId}`,
         {
           message: payload.message,
           type: payload.type,
