@@ -14,6 +14,22 @@ class Loggie {
       const vm = this;
 
       window.addEventListener("error", function (event) {
+        let formattedErrorType;
+        const errorType = String(event.error).substr(
+          0,
+          (String(event.error) + ":").indexOf(":")
+        );
+
+        const validErrorTypes = {
+          SyntaxError: "Syntax Error",
+          ReferenceError: "Reference Error",
+          TypeError: "Type Error",
+        };
+
+        if (validErrorTypes[errorType]) {
+          formattedErrorType = validErrorTypes[errorType];
+        }
+
         const message = event.message || "Message not found";
         const fileName = event.filename || "Unable to get file name";
         const lineno = event.lineno || "Unable to get line number";
@@ -21,7 +37,10 @@ class Loggie {
 
         const crashdeckErrorMessage = `${message} in ${fileName} at line number: ${lineno} and column: ${colno}`;
 
-        vm.error({ message: crashdeckErrorMessage });
+        vm.error({
+          message: crashdeckErrorMessage,
+          errorType: formattedErrorType || "",
+        });
       });
     }
   }
@@ -77,7 +96,7 @@ class Loggie {
         },
         {
           headers: {
-            "Authorization": `${this.secretKey}`,
+            Authorization: `${this.secretKey}`,
           },
         }
       )
