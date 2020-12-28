@@ -1,4 +1,4 @@
-# Loggie.io
+# Crashdeck.io
 
 Start to log everything in just few clicks
 
@@ -12,59 +12,66 @@ Start to log everything in just few clicks
 ## Installing
 
 ```bash
-$ npm install loggie-io
+$ npm i @crashdeck/crashdeck
 ```
 
 ## Example
 
-### Node.js
+### Initialization
 
 ```js
-const loggie = require('loggie-io');
+import Crashdeck from "crashdeck";
 
-loggie.init({
+Crashdeck.init({
   secretKey: "<secret-key>",
-  bucketId: "<bucket-id>"
-})
+  bucketId: "<bucket-id>",
+});
 ```
+
+Crashdeck do not collect the errors automatically. If you want to enable this feature, use the following code:
+
+```js
+Crashdeck.autoCollectErrors(true);
+```
+
 Start to push logs into your bucket
 
 #### info
 
 ```js
-loggie.info({
-  message: "This is a info log"
-})
+Crashdeck.info({
+  message: "This is a info log",
+});
 ```
 
 #### debug
 
 ```js
-loggie.debug({
-  message: "This is a debug log"
-})
+Crashdeck.debug({
+  message: "This is a debug log",
+});
 ```
 
 #### warning
 
 ```js
-loggie.warning({
-  message: "This is a warning log"
-})
+Crashdeck.warning({
+  message: "This is a warning log",
+});
 ```
 
 #### error
 
 ```js
-loggie.error({
-  message: "This is a error log"
-})
+Crashdeck.error({
+  message: "This is a error log",
+});
 ```
 
 #### fatal
 
 ```js
-loggie.fatal({
-  message: "This is a fatl log"
-})
+Crashdeck.fatal({
+  message: "This is a fatl log",
+});
 ```
